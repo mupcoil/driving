@@ -1,0 +1,9 @@
+
+Options +FollowSymLinks
+RewriteEngine on 
+
+RewriteRule ^([^?|\/]*)\/$ ?str1=$1 [L,NC]
+RewriteRule ^([^?|\/]*)\/([^?|\/]*)\/$ ?str1=$1&str2=$2 [L,NC]
+
+RewriteRule ^([^?|\/|.]*).[htm|html]*$ ?str1=$1 [L,NC]
+RewriteRule ^([^?|\/|.]*)\/([^?|\/|.]*).[htm|html]*$ ?str1=$1&str2=$2 [L,NC]
